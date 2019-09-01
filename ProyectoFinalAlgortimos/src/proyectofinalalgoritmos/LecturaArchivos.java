@@ -35,8 +35,8 @@ public class LecturaArchivos {
             double promedioSalud=(Double.parseDouble(temp[9])+Double.parseDouble(temp[10])+Double.parseDouble(temp[11])+Double.parseDouble(temp[12]))/4;
             double promedioLaboral=(Double.parseDouble(temp[14])+Double.parseDouble(temp[15])+Double.parseDouble(temp[16])+Double.parseDouble(temp[17]))/4;
             double promedioFamiliar=(Double.parseDouble(temp[19])+Double.parseDouble(temp[20])+Double.parseDouble(temp[21])+Double.parseDouble(temp[22]))/4;
- 
-            li.push(new Estudiante(temp[0],temp[1],temp[2],promedioEconomia,promedioSalud,promedioLaboral,promedioFamiliar));
+            double promedioGlobal = (promedioEconomia+promedioFamiliar+promedioLaboral+promedioSalud)/4;
+            li.push(new Estudiante(temp[0],temp[1],temp[2],promedioEconomia,promedioSalud,promedioLaboral,promedioFamiliar,promedioGlobal));
          }
       }
       

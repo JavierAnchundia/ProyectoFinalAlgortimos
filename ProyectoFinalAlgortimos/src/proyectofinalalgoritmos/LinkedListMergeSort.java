@@ -5,7 +5,6 @@
  */
 package proyectofinalalgoritmos;
 
-import java.util.LinkedList;
 
 /**
  *
@@ -56,6 +55,15 @@ public class LinkedListMergeSort {
         }     break;
         case "Familiar":
             if (a.promFamilia >= b.promFamilia) { 
+            result = a; 
+            result.next = sortedMerge(a.next, b); 
+            } 
+             else { 
+            result = b; 
+            result.next = sortedMerge(a, b.next); 
+        }     break;
+        case "Global":
+            if (a.promGlobal >= b.promGlobal && a.promSalud>= b.promSalud) { 
             result = a; 
             result.next = sortedMerge(a.next, b); 
             } 

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="306.0" prefWidth="633.0" style="-fx-background-color: Dr;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectofinalalgoritmos.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="306.0" prefWidth="633.0" style="-fx-background-color: Dr;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectofinalalgoritmos.FXMLDocumentController">
     <children>
       <AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="633.0" style="-fx-background-color: Dr;">
          <children>
@@ -20,6 +20,7 @@
                   <Button layoutX="16.0" layoutY="90.0" mnemonicParsing="false" onAction="#mostrarEconomica" text="Area Economica" />
                   <Button layoutX="16.0" layoutY="140.0" mnemonicParsing="false" onAction="#mostrarLaboral" prefHeight="25.0" prefWidth="101.0" text="Area Laboral" />
                   <Button layoutX="16.0" layoutY="190.0" mnemonicParsing="false" onAction="#mostrarFamilia" prefHeight="25.0" prefWidth="101.0" text="Area Familia" />
+                  <Button layoutX="16.0" layoutY="232.0" mnemonicParsing="false" onAction="#mostrarGlobal" prefHeight="25.0" prefWidth="101.0" text="Global" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="Economica" layoutX="140.0" opacity="0.0" prefHeight="306.0" prefWidth="491.0">
@@ -109,6 +110,28 @@
                         <TableColumn fx:id="Apellido4" prefWidth="117.0" text="Apellido" />
                         <TableColumn fx:id="Matricula4" prefWidth="103.0" text="Matricula" />
                         <TableColumn fx:id="Prioridad4" minWidth="0.0" prefWidth="70.0" text="Prioridad" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="Global" layoutX="140.0" prefHeight="316.0" prefWidth="363.0">
+               <children>
+                  <ImageView fitHeight="306.0" fitWidth="505.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@EDIFICIO_UBEP.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="47.0" layoutY="50.0" text="Global">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="Globaltab" layoutX="47.0" layoutY="100.0" prefHeight="175.0" prefWidth="406.0">
+                     <columns>
+                        <TableColumn fx:id="Nombre0" prefWidth="115.0" text="Nombre" />
+                        <TableColumn fx:id="Apellido0" prefWidth="117.0" text="Apellido" />
+                        <TableColumn fx:id="Matricula0" prefWidth="103.0" text="Matricula" />
+                        <TableColumn fx:id="Prioridad0" minWidth="0.0" prefWidth="70.0" text="Prioridad" />
                      </columns>
                   </TableView>
                </children>

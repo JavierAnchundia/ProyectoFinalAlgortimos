@@ -17,10 +17,11 @@ public class Estudiante {
     protected double promSalud;
     protected double promLaboral;
     protected double promFamilia;
+    protected double promGlobal;
     
     public Estudiante next;
 
-    public Estudiante(String nombre, String apellido, String matricula, double promEconomia, double promSalud, double promLaboral, double promFamilia) {
+    public Estudiante(String nombre, String apellido, String matricula, double promEconomia, double promSalud, double promLaboral, double promFamilia,double promGlobal) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.matricula = matricula;
@@ -28,6 +29,7 @@ public class Estudiante {
         this.promSalud = promSalud;
         this.promLaboral = promLaboral;
         this.promFamilia = promFamilia;
+        this.promGlobal = promGlobal;
     }
 
     public Estudiante(String nombre, String apellido, String matricula, double prom) {
@@ -38,6 +40,7 @@ public class Estudiante {
         this.promSalud = prom;
         this.promEconomia = prom;
         this.promFamilia = prom;
+        this.promGlobal = prom;
     }
     
     
@@ -95,6 +98,14 @@ public class Estudiante {
 
     public void setPromFamilia(int promFamilia) {
         this.promFamilia = promFamilia;
+    }
+
+    public double getPromGlobal() {
+        return promGlobal;
+    }
+
+    public void setPromGlobal(int promGlobal) {
+        this.promGlobal = promGlobal;
     }
 
 

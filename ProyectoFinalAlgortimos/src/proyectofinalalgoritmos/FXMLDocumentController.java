@@ -24,8 +24,14 @@ import javafx.scene.layout.AnchorPane;
  */
 public class FXMLDocumentController implements Initializable {
     
-    @FXML
-    private Label label;
+    
+    @FXML TableView<Estudiante> Globaltab;
+    @FXML TableColumn<Estudiante, String> Nombre0;
+    @FXML TableColumn<Estudiante, String> Apellido0;
+    @FXML TableColumn<Estudiante, String> Matricula0;
+    @FXML TableColumn<Estudiante, Double> Prioridad0;
+
+    ObservableList<Estudiante> listG =FXCollections.observableArrayList();
     
     @FXML TableView<Estudiante> tableView1;
     @FXML TableColumn<Estudiante, String> Nombre1;
@@ -43,7 +49,7 @@ public class FXMLDocumentController implements Initializable {
 
     ObservableList<Estudiante> list2 =FXCollections.observableArrayList();
     
-     @FXML TableView<Estudiante> tableView3;
+    @FXML TableView<Estudiante> tableView3;
     @FXML TableColumn<Estudiante, String> Nombre3;
     @FXML TableColumn<Estudiante, String> Apellido3;
     @FXML TableColumn<Estudiante, String> Matricula3;
@@ -59,6 +65,7 @@ public class FXMLDocumentController implements Initializable {
 
     ObservableList<Estudiante> list4 =FXCollections.observableArrayList();
     
+    @FXML AnchorPane Global;
     @FXML AnchorPane Economica;
     @FXML AnchorPane Laboral;
     @FXML AnchorPane Familia;
@@ -67,8 +74,10 @@ public class FXMLDocumentController implements Initializable {
     
      LinkedListMergeSort li;
 
+    @FXML
     public void mostrarMedica(){
-       Economica.setVisible(false);
+        Global.setVisible(false);
+        Economica.setVisible(false);
         Laboral.setVisible(false);
         Medica.setVisible(true);
         Familia.setVisible(false);
@@ -88,7 +97,9 @@ public class FXMLDocumentController implements Initializable {
         }}
     }
     
+    @FXML
     public void mostrarFamilia(){
+        Global.setVisible(false);
         Economica.setVisible(false);
         Laboral.setVisible(false);
         Medica.setVisible(false);
@@ -109,7 +120,9 @@ public class FXMLDocumentController implements Initializable {
         }}
     }
     
+    @FXML
     public void mostrarLaboral(){
+        Global.setVisible(false);
         Economica.setVisible(false);
         Laboral.setVisible(true);
         Medica.setVisible(false);
@@ -131,7 +144,9 @@ public class FXMLDocumentController implements Initializable {
         }}
     }
     
+    @FXML
     public void mostrarEconomica(){
+        Global.setVisible(false);
         Economica.setVisible(true);
         Laboral.setVisible(false);
         Medica.setVisible(false);
@@ -152,6 +167,29 @@ public class FXMLDocumentController implements Initializable {
 
         }}
     }
+    @FXML
+    public void mostrarGlobal(){
+        Global.setVisible(true);
+        Economica.setVisible(false);
+        Laboral.setVisible(false);
+        Medica.setVisible(false);
+        Familia.setVisible(false);
+        
+        Global.setOpacity(1);
+        
+        li.setOrdenamiento("Global");
+        li.head = li.mergeSort(li.head); 
+
+        Estudiante header = li.head;
+        if(listG.isEmpty()){
+        while(header!=null){
+        listG.add(new Estudiante(header.nombre,header.apellido,header.matricula,header.promGlobal));
+            System.out.println(header.promGlobal);
+        header=header.next;
+        Globaltab.setItems(listG);
+
+        }}
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
@@ -163,17 +201,19 @@ public class FXMLDocumentController implements Initializable {
         li.head = li.mergeSort(li.head); 
         mostrarFamilia();
         System.out.println("proyectofinalalgoritmos.FXMLDocumentController.initialize()");
+        Global.setVisible(false);
         Economica.setVisible(false);
         Laboral.setVisible(false);
         Medica.setVisible(false);
         Familia.setVisible(true);
+        
         
        Nombre1.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("nombre"));
        Apellido1.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("apellido"));
        Matricula1.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("matricula"));
        Prioridad1.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("promEconomia"));
        
-     Nombre2.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("nombre"));
+       Nombre2.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("nombre"));
        Apellido2.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("apellido"));
        Matricula2.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("matricula"));
        Prioridad2.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("promFamilia"));
@@ -188,6 +228,13 @@ public class FXMLDocumentController implements Initializable {
        Apellido4.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("apellido"));
        Matricula4.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("matricula"));
        Prioridad4.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("promSalud"));
+       
+       Nombre0.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("nombre"));
+       Apellido0.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("apellido"));
+       Matricula0.setCellValueFactory(new PropertyValueFactory<Estudiante,String>("matricula"));
+       Prioridad0.setCellValueFactory(new PropertyValueFactory<Estudiante,Double>("promGlobal"));
+       
+      
     }    
     
 }
