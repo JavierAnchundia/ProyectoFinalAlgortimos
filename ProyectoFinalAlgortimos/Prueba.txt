@@ -1,0 +1,4 @@
+Pedrito,Escamoso,201811111,Economia,1,2,5,3,Salud,4,2,5,5,Laboral,1,1,1,1,Familiar,5,5,5,5
+Jonathan,Joestar,201900112,Economia,1,2,3,4,Salud,1,1,1,1,Laboral,5,4,2,1,Familiar,1,1,5,5
+Joseph,Joestar,201705021,Economia,5,5,5,5,Salud,1,1,1,1,Laboral,5,5,5,5,Familiar,5,5,5,5
+Jotaro,Joestar,201712121,Economia,1,1,1,1,Salud,1,1,1,1,Laboral,1,1,1,1,Familiar,1,1,1,1
