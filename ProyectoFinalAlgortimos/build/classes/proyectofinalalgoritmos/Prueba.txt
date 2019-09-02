@@ -1,2 +1,2 @@
 Pedrito,Escamoso,Economia,1,2,5,3,Salud,4,2,5,5,Laboral,1,1,1,1,Familiar,5,5,5,5
-Jonathan,Joestar,Economia,1,2,3,4,Salud,1,1,1,1,Laboral,5,4,2,1,Familiar,1,1,5,5
+Jonathan,Joestar,Economia,6,8,9,7,Salud,1,1,1,1,Laboral,5,4,2,1,Familiar,1,1,5,5

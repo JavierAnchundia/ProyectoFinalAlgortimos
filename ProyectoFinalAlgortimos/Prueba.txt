@@ -1,4 +1,5 @@
-Pedrito,Escamoso,201811111,Economia,1,2,5,3,Salud,4,2,5,5,Laboral,1,1,1,1,Familiar,5,5,5,5
+Pedrito,Escamoso,201811111,Economia,1,2,5,3,Salud,4,2,5,5,Laboral,9,9,9,8,Familiar,5,5,5,5
 Jonathan,Joestar,201900112,Economia,1,2,3,4,Salud,1,1,1,1,Laboral,5,4,2,1,Familiar,1,1,5,5
-Joseph,Joestar,201705021,Economia,5,5,5,5,Salud,1,1,1,1,Laboral,5,5,5,5,Familiar,5,5,5,5
-Jotaro,Joestar,201712121,Economia,1,1,1,1,Salud,1,1,1,1,Laboral,1,1,1,1,Familiar,1,1,1,1
+Joseph,Joestar,201705021,Economia,8,8,7,9,Salud,1,1,1,1,Laboral,5,5,5,5,Familiar,5,5,5,5
+Jotaro,Joestar,201712121,Economia,1,1,1,1,Salud,1,1,1,1,Laboral,1,1,1,1,Familiar,9,7,8,8
+Ana,Perez,201912121,Economia,1,1,1,1,Salud,8,9,9,7,Laboral,8,9,8,1,Familiar,1,1,1,1
